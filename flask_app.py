@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # A simple list to store tasks
 tasks = [
-    {'id': 1, 'title': 'Learn Python', 'done': False},
+    {'id': 1, 'title': 'Modified Learn Jenkins', 'done': False},
     {'id': 2, 'title': 'Build a Flask App', 'done': False}
 ]
 
