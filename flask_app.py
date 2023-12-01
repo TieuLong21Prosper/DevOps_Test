@@ -39,4 +39,8 @@ if __name__ == '__main__':
     host = '0.0.0.0'
     port = 5000  # You can change this port if needed
 
-    app.run(debug=True, host=host, port=port)
+    # Run the app using Gunicorn
+    from gunicorn import util
+    util.check_version("18.0.0")
+    from gunicorn.app.wsgiapp import WSGIApplication
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
