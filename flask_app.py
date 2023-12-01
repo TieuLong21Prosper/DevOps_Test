@@ -36,11 +36,4 @@ def create_task():
 
 if __name__ == '__main__':
     # Use environment variables to set host and port dynamically
-    host = '18.140.55.197'
-    port = 5000  # You can change this port if needed
-
-    # Run the app using Gunicorn
-    from gunicorn import util
-    util.check_version("18.0.0")
-    from gunicorn.app.wsgiapp import WSGIApplication
-    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+    app.run(debug=True)
