@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 tasks = [
-    {'id': 1, 'title': 'Modified Learn Jenkins 'done': False},
+    {'id': 1, 'title': 'Modified Learn Jenkins', 'done': False},
     {'id': 2, 'title': 'Build a Flask App', 'done': False}
 ]
 
