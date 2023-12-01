@@ -36,4 +36,5 @@ def create_task():
 
 if __name__ == '__main__':
     # Use environment variables to set host and port dynamically
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
+
