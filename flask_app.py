@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # A simple list to store tasks
 tasks = [
-    {'id': 1, 'title': 'Modified Learn Jenkins', 'done': False},
+    {'id': 1, 'title': 'Learn Python', 'done': False},
     {'id': 2, 'title': 'Build a Flask App', 'done': False}
 ]
 
@@ -35,5 +35,8 @@ def create_task():
     return jsonify({'task': new_task}), 201
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use environment variables to set host and port dynamically
+    host = '0.0.0.0'
+    port = 5000  # You can change this port if needed
 
+    app.run(debug=True, host=host, port=port)
